@@ -182,55 +182,22 @@
 
 # print(arr)
 
-### 국영수 문제
 
-# arr = [] 
+# #### 국영수 백준 문제 ###
+# N = int(input())
 
-# for _ in range(int(input())):
-#     arr.append(list(map(str, input().split())))
+# score_list = []
 
-# arr.sort(key=lambda x : (-x[1], x[2], -x[3], x[0]))
+# for i in range(N):
+#     [name, kor, eng, math] = map(str, input().split())
 
-# for e in arr:
-#     print(str(e[0]))
+#     score_list.append([name, int(kor), int(eng), int(math)])
 
-# arr = []
+# sorted_score_list = sorted(score_list, key=lambda x : (-x[1], x[2], -x[3], x[0]))
 
-# for _ in range(int(input())):
-#     arr.append(list(map(str, input().split())))
+# print(sorted_score_list)
 
-# list(map(int, arr))
-# arr.sort(key = lambda x:(-x[1], x[2], -x[3], x[0]))
-# print(arr)
+# for score in sorted_score_list:
+#     print(score[0])
 
-# arr = [] # 
 
-# for _ in range(int(input())):
-#     arr.append(list(map(str, input().split()))) # 문자열로 저장한다.
-#     print(arr)  
-
-# change_arr = ord(arr[0][0][0]) # 이름 부분을 아스키 코드로 바꾼다.
-# print(change_arr)
-# arr[0][0] = change_arr # 바꾼 아스키코드를 기존 리스트의 이름과 교체한다.
-# print(arr) 
-# arr.sort를 통해서 정렬해준다.
-
-arr = []
-change_arr = []
-
-def check(arr):
-    for i in range(int(input())):
-        arr.append(list(map(str, input().split())))
-        change_arr.append(ord(arr[i][0][0]))
-        arr[i][0] = change_arr[i]
-        arr[i][0] = str(arr[i][0])
-        arr = list(map(int, arr))
-        print(type(arr))
-        print(type(arr[0]))
-        print(type(arr[i][0]))
-        print(type(arr[i][1]))
-        print(type(arr[i][2]))
-
-    
-nowlist = list(map(check(arr), arr))
-print(nowlist)
